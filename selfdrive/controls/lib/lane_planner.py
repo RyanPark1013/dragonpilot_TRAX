@@ -22,7 +22,7 @@ TRAJECTORY_SIZE = 33
 # model path is in the frame of the camera
 if EON:
   CAMERA_OFFSET = -0.06
-  PATH_OFFSET = 0.0
+  PATH_OFFSET = 0.2
 else:
   CAMERA_OFFSET = 0.04
   PATH_OFFSET = 0.04
