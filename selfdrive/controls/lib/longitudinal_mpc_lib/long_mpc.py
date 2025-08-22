@@ -69,24 +69,24 @@ def get_jerk_factor(personality=log.LongitudinalPersonality.standard):
 
 def get_T_FOLLOW(personality=log.LongitudinalPersonality.standard):
   if personality==log.LongitudinalPersonality.relaxed:
-    return 1.75
+    return 1.35 #edited 250821 ryanpark 1.75
   elif personality==log.LongitudinalPersonality.standard:
-    return 1.45
+    return 1.15 #edited 250821 ryanpark 1.45
   elif personality==log.LongitudinalPersonality.aggressive:
-    return 1.25
+    return 1.00 #edited 250821 ryanpark 1.25
   else:
     raise NotImplementedError("Longitudinal personality not supported")
 
 def get_dynamic_follow(v_ego, personality=log.LongitudinalPersonality.standard):
   if personality==log.LongitudinalPersonality.relaxed:
     x_vel =  [0,    3.05,   3.61,   4.16,   7.14,   11.11]
-    y_dist = [1.75, 1.75, 1.77, 1.75, 1.8,  1.8]
+    y_dist = [1.35, 1.35, 1.35, 1.35, 1.4,  1.4] #edited 250821 ryanpark [1.75, 1.75, 1.77, 1.75, 1.8,  1.8]
   elif personality==log.LongitudinalPersonality.standard:
     x_vel =  [0,    3.05,   3.61,   4.16,   7.14,   11.11]
-    y_dist = [1.5,  1.5,  1.51,  1.5,  1.5,  1.45]
+    y_dist = [1.15,  1.15,  1.15,  1.15,  1.15,  1.2] #edited 250821 ryanpark [1.5,  1.5,  1.51,  1.5,  1.5,  1.45]
   elif personality==log.LongitudinalPersonality.aggressive:
     x_vel =  [0,    3.05,   3.61,   4.16,   7.14,   11.11]
-    y_dist = [1.12, 1.12, 1.13, 1.12, 1.22, 1.22]
+    y_dist = [1.0, 1.0, 1.0, 1.0, 1.1, 1.1] #edited 250821 ryanpark [1.12, 1.12, 1.13, 1.12, 1.22, 1.22]
   else:
     raise NotImplementedError("Dynamic Follow personality not supported")
   return np.interp(v_ego, x_vel, y_dist)
