@@ -13,14 +13,14 @@ Ecu = car.CarParams.Ecu
 
 class CarControllerParams:
   STEER_MAX = 300  # GM limit is 3Nm. Used by carcontroller to generate LKA output
-  STEER_STEP = 4  # Active control frames per command (~33hz)
+  STEER_STEP = 4  # Active control frames per command (~33hz), edited 250822 ryanpark 3
   INACTIVE_STEER_STEP = 10  # Inactive control frames per command (10hz)
-  STEER_DELTA_UP = 8  # Delta rates require review due to observed EPS weakness
-  STEER_DELTA_DOWN = 15
+  STEER_DELTA_UP = 6  # Delta rates require review due to observed EPS weakness, edited 250822 ryanpark 8
+  STEER_DELTA_DOWN = 10 #edited 250822 ryanpark 15
   STEER_DRIVER_ALLOWANCE = 65
   STEER_DRIVER_MULTIPLIER = 4
   STEER_DRIVER_FACTOR = 100
-  NEAR_STOP_BRAKE_PHASE = 0.5  # m/s
+  NEAR_STOP_BRAKE_PHASE = 0.2  # m/s, edited 250822 ryanpark 0.5
 
   # Heartbeat for dash "Service Adaptive Cruise" and "Service Front Camera"
   ADAS_KEEPALIVE_STEP = 100
