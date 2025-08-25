@@ -21,8 +21,8 @@ GearShifter = car.CarState.GearShifter
 EventName = car.CarEvent.EventName
 TorqueFromLateralAccelCallbackType = Callable[[float, car.CarParams.LateralTorqueTuning, float, float, bool], float]
 
-MAX_CTRL_SPEED = (V_CRUISE_MAX + 4) * CV.KPH_TO_MS
-ACCEL_MAX = 2.0
+MAX_CTRL_SPEED = (V_CRUISE_MAX + 0) * CV.KPH_TO_MS #edited 250825 ryanpark + 4
+ACCEL_MAX = 1.2 #edited 250825 ryanpark 2.0
 ACCEL_MIN = -3.5
 FRICTION_THRESHOLD = 0.3
 
@@ -166,7 +166,7 @@ class CarInterfaceBase(ABC):
     ret.stoppingControl = True
     ret.longitudinalTuning.deadzoneBP = [0.]
     ret.longitudinalTuning.deadzoneV = [0.]
-    ret.longitudinalTuning.kf = 0.8 #edited 250822 ryanpark 1.
+    ret.longitudinalTuning.kf = 1.
     ret.longitudinalTuning.kpBP = [0.]
     ret.longitudinalTuning.kpV = [1.]
     ret.longitudinalTuning.kiBP = [0.]
