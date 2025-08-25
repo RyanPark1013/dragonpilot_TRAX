@@ -95,7 +95,7 @@ class CarInterface(CarInterfaceBase):
       ret.minSteerSpeed = 10 * CV.KPH_TO_MS
 
       # Tuning for experimental long
-      ret.longitudinalTuning.kpV = [1.5, 1.0] #edited 250822 ryanpark [2.0, 1.5]
+      ret.longitudinalTuning.kpV = [1.8, 1.3] #edited 250825 ryanpark [2.0, 1.5]
       ret.longitudinalTuning.kiV = [0.4] #edited 250822 ryanpark [0.72]
       ret.stoppingDecelRate = 2.0  # reach brake quickly after enabling
       ret.vEgoStopping = 0.25
