@@ -31,7 +31,7 @@ class CarControllerParams:
   # to apply some more braking if we're on a downhill slope.
   # Our controller should still keep the 2 second average above
   # -3.5 m/s^2 as per planner limits
-  ACCEL_MAX = 2.  # m/s^2
+  ACCEL_MAX = 1.2  # m/s^2, edited 250825 ryanpark 2.0
   ACCEL_MIN = -4.  # m/s^2
 
   def __init__(self, CP):
